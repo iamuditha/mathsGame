@@ -11,11 +11,11 @@
         android:id="@+id/add"
         android:layout_width="250dp"
         android:layout_height="95dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="112dp"
         android:background="@drawable/addition"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,22 +23,22 @@
         android:id="@+id/substract"
         android:layout_width="250dp"
         android:layout_height="95dp"
-        android:layout_marginTop="52dp"
-        android:background="@drawable/division"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/subtraction"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/add" />
 
     <Button
         android:id="@+id/divide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="/"
+        android:layout_width="250dp"
+        android:layout_height="95dp"
+        android:background="@drawable/division"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.306"
+        app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/substract" />
 
@@ -46,12 +46,10 @@
         android:id="@+id/mul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="16dp"
         android:text="*"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.306"
+        app:layout_constraintHorizontal_bias="0.263"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divide"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/divide" />
 </androidx.constraintlayout.widget.ConstraintLayout>

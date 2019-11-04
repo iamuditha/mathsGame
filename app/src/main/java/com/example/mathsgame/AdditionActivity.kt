@@ -31,7 +31,10 @@ class AdditionActivity : AppCompatActivity() {
         val correctResult = expression.evaluate()
 
         if (correctResult.toInt().toString() == answer.text.toString()){
-            startActivity(Intent(this, CongratulationsActivity::class.java))
+            val intent = Intent(this, CongratulationsActivity::class.java)
+            intent.putExtra("answer",(correctResult.toInt()-1).toString())
+            startActivity(intent)
+
             Log.i("checking","done")
         }else{
             startActivity(Intent(this, HintActivity::class.java))
