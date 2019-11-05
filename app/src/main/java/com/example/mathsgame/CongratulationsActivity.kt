@@ -4,6 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_congratulations.*
 
 
@@ -18,6 +21,16 @@ class CongratulationsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_congratulations)
+
+        val bottom: Animation = AnimationUtils.loadAnimation(this,R.anim.from_bottom)
+
+        congratulationImage.startAnimation(bottom)
+        correct.startAnimation(bottom)
+        correctAnswer.startAnimation(bottom)
+        next.startAnimation(bottom)
+
+
+
 
         val intent = intent
         val bundle = intent.extras

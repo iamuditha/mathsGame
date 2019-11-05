@@ -4,7 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import kotlinx.android.synthetic.main.activity_hint.*
+import kotlinx.android.synthetic.main.activity_start.*
 
 class HintActivity : AppCompatActivity() {
 
@@ -12,10 +15,20 @@ class HintActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hint)
 
+        val top: Animation = AnimationUtils.loadAnimation(this,R.anim.from_top)
+        val bottom: Animation = AnimationUtils.loadAnimation(this,R.anim.from_bottom)
+
+        AnotherQuiz.startAnimation(bottom)
+        tryAgain.startAnimation(bottom)
+        hint.startAnimation(top)
+
         val intent = intent
         val bundle = intent.extras
         val correct_answer = bundle?.getInt("correct_answer")
         val input_answer = bundle?.getString("input_answer")?.toInt()
+        val num = bundle?.getInt("quizNo")
+        val quizNumber = num
+        Log.i("numm hint", quizNumber.toString())
 
 
         if(correct_answer!! - input_answer!! == 1 || input_answer!! - correct_answer!! == 1){
@@ -30,6 +43,12 @@ class HintActivity : AppCompatActivity() {
 
         AnotherQuiz.setOnClickListener {
             startActivity(Intent(this, AdditionActivity::class.java))
+        }
+
+        tryAgain.setOnClickListener {
+            val intent4 = Intent(this,TryAgainActivity::class.java)
+            intent4.putExtra("quizNo",quizNumber)
+            startActivity(intent4)
         }
 
 
