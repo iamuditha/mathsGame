@@ -1,5 +1,6 @@
 package com.example.mathsgame
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -21,7 +22,7 @@ class CongratulationsActivity : AppCompatActivity() {
         val intent = intent
         val bundle = intent.extras
         val num = bundle?.getString("answer")
-
+        val quizNumber = bundle?.getInt("qno")
         val number = numbers[num?.toInt()!!]
 
         val resources = resources
@@ -31,5 +32,12 @@ class CongratulationsActivity : AppCompatActivity() {
         )
 
         correctAnswer.setImageResource(resourceId)
+
+        next.setOnClickListener {
+            val intent1 = Intent(this, AdditionActivity::class.java)
+            intent1.putExtra("qno1",quizNumber)
+            startActivity(intent1)
+
+        }
     }
 }

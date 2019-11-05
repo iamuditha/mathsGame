@@ -4,6 +4,8 @@ import java.util.*
 
 data class Quiz(
     val id : Int,
-    val equation : String
+    val firstNum : String,
+    val symbol: String,
+    val secondNum : String
 
 )

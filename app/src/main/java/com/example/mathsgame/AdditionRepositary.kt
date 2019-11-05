@@ -4,9 +4,9 @@ class AdditionRepositary {
 
     fun fetchAdditionQuiz() : List<Quiz>{
         return listOf(
-            Quiz(1,"2+7"),
-            Quiz(1,"4+6"),
-            Quiz(1,"12+5")
+            Quiz(1,"2","+","4"),
+            Quiz(2,"4","+","3"),
+            Quiz(3,"1","+","5")
             )
     }
 }
