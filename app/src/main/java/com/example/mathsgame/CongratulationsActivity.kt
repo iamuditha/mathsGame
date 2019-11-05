@@ -22,7 +22,7 @@ class CongratulationsActivity : AppCompatActivity() {
         val intent = intent
         val bundle = intent.extras
         val num = bundle?.getString("answer")
-        val quizNumber = bundle?.getInt("qno")
+        val quizNumber = bundle?.getInt("qno")!! +1
         val number = numbers[num?.toInt()!!]
 
         val resources = resources
@@ -35,7 +35,9 @@ class CongratulationsActivity : AppCompatActivity() {
 
         next.setOnClickListener {
             val intent1 = Intent(this, AdditionActivity::class.java)
-            intent1.putExtra("qno1",quizNumber)
+            intent.putExtra("qno3", quizNumber)
+            intent.putExtra("qno4", false)
+
             startActivity(intent1)
 
         }
