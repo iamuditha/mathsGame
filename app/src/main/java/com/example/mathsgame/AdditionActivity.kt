@@ -42,11 +42,6 @@ class AdditionActivity : AppCompatActivity() {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        Log.i("gooo", "I resume called")
-
-    }
 
     private fun displayNumbers() {
         val index1 = additionQuizList[quizNumber].firstNum.toInt() - 1
@@ -72,14 +67,14 @@ class AdditionActivity : AppCompatActivity() {
             startActivity(intent)
 
         }else{
-            startActivity(Intent(this, HintActivity::class.java))
+            val intent3 = Intent(this, HintActivity::class.java)
+            intent3.putExtra("correct_answer",(correctResult.toInt()))
+            intent3.putExtra("input_answer",answer.text.toString())
+            startActivity(intent3)
+//            Log.i("answer", correctResult.toInt().toString())
+//                     Log.i("answer", answer.text.toString())
         }
 
     }
-
-//    private fun showQuiz(){
-//        additionQuiz.text = myQuiz
-//    }
-
 
 }
