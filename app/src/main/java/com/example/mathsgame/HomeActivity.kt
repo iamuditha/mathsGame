@@ -3,14 +3,10 @@ package com.example.mathsgame
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.view.animation.AnimationUtils
 import kotlinx.android.synthetic.main.activity_home.*
-import android.R.attr.animation
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-import android.view.View
+import com.example.mathsgame.addition.Addition1Activity
+import com.example.mathsgame.addition.Addition2Activity
 
 
 class HomeActivity : AppCompatActivity() {
@@ -37,7 +33,7 @@ class HomeActivity : AppCompatActivity() {
 
     //go to addition page
     private fun navigateToAddition() {
-        val intent = Intent(this, AdditionActivity::class.java)
+        val intent = Intent(this, Addition2Activity::class.java)
         startActivity(intent)
     }
 }

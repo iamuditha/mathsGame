@@ -1,8 +1,7 @@
-package com.example.mathsgame
+package com.example.mathsgame.addition
 
-import java.util.*
 
-data class Quiz(
+data class Quiz1(
     val id : Int,
     val firstNum : String,
     val symbol: String,

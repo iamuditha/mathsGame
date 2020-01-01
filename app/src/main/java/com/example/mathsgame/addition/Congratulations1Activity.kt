@@ -1,35 +1,33 @@
-package com.example.mathsgame
+package com.example.mathsgame.addition
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.activity_congratulations.*
+import androidx.appcompat.app.AppCompatActivity
+import com.example.mathsgame.R
+import com.example.mathsgame.SoundService
+import kotlinx.android.synthetic.main.activity_congratulations1.*
 
 
-
-
-
-class CongratulationsActivity : AppCompatActivity() {
+class Congratulations1Activity : AppCompatActivity() {
 
     private val numbers = mutableListOf("one", "two", "three", "four","five","six","seven","eight","nine")
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        startService(Intent(this, SoundService::class.java))
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_congratulations)
+        setContentView(R.layout.activity_congratulations1)
 
-        val bottom: Animation = AnimationUtils.loadAnimation(this,R.anim.from_bottom)
+        val bottom: Animation = AnimationUtils.loadAnimation(this,
+            R.anim.from_bottom
+        )
 
         congratulationImage.startAnimation(bottom)
         correct.startAnimation(bottom)
         correctAnswer.startAnimation(bottom)
         next.startAnimation(bottom)
-
-
 
 
         val intent = intent
@@ -47,12 +45,16 @@ class CongratulationsActivity : AppCompatActivity() {
         correctAnswer.setImageResource(resourceId)
 
         next.setOnClickListener {
-            val intent1 = Intent(this, AdditionActivity::class.java)
+            val intent1 = Intent(this, Addition1Activity::class.java)
             intent.putExtra("qno3", quizNumber)
             intent.putExtra("qno4", false)
 
             startActivity(intent1)
 
         }
+    }
+    override fun onDestroy() { //stop service and stop music
+        stopService(Intent(this, SoundService::class.java))
+        super.onDestroy()
     }
 }

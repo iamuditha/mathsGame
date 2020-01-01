@@ -9,18 +9,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme1">
-        <activity android:name=".TryAgainActivity"></activity>
-        <activity android:name=".StartActivity">
+        <activity android:name=".addition.TryAgain1Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".StartActivity"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HintActivity" />
-        <activity android:name=".CongratulationsActivity" />
-        <activity android:name=".AdditionActivity" />
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".addition.Hint1Activity"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".addition.Hint2Activity"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".addition.Congratulations1Activity"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".addition.Congratulations2Activity"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".addition.Addition1Activity"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".addition.Addition2Activity"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".HomeActivity"
+            android:screenOrientation="landscape"/>
+
+        <service android:name=".SoundService"  android:enabled="true"></service>
+
     </application>
 
 </manifest>

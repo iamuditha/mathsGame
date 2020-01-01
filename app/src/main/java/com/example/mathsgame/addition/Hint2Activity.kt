@@ -1,4 +1,4 @@
-package com.example.mathsgame
+package com.example.mathsgame.addition
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,17 +6,21 @@ import android.os.Bundle
 import android.util.Log
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import com.example.mathsgame.R
 import kotlinx.android.synthetic.main.activity_hint.*
-import kotlinx.android.synthetic.main.activity_start.*
 
-class HintActivity : AppCompatActivity() {
+class Hint2Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hint)
 
-        val top: Animation = AnimationUtils.loadAnimation(this,R.anim.from_top)
-        val bottom: Animation = AnimationUtils.loadAnimation(this,R.anim.from_bottom)
+        val top: Animation = AnimationUtils.loadAnimation(this,
+            R.anim.from_top
+        )
+        val bottom: Animation = AnimationUtils.loadAnimation(this,
+            R.anim.from_bottom
+        )
 
         AnotherQuiz.startAnimation(bottom)
         tryAgain.startAnimation(bottom)
@@ -42,11 +46,11 @@ class HintActivity : AppCompatActivity() {
         }
 
         AnotherQuiz.setOnClickListener {
-            startActivity(Intent(this, AdditionActivity::class.java))
+            startActivity(Intent(this, Addition2Activity::class.java))
         }
 
         tryAgain.setOnClickListener {
-            val intent4 = Intent(this,TryAgainActivity::class.java)
+            val intent4 = Intent(this, TryAgain2Activity::class.java)
             intent4.putExtra("quizNo",quizNumber)
             startActivity(intent4)
         }

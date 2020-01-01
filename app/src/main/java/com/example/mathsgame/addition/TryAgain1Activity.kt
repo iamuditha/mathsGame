@@ -1,4 +1,4 @@
-package com.example.mathsgame
+package com.example.mathsgame.addition
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,14 +6,16 @@ import android.os.Bundle
 import android.util.Log
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import kotlinx.android.synthetic.main.activity_try_again.*
+import com.example.mathsgame.R
+import kotlinx.android.synthetic.main.activity_try_again1.*
 import net.objecthunter.exp4j.ExpressionBuilder
 
-class TryAgainActivity : AppCompatActivity() {
+class TryAgain1Activity : AppCompatActivity() {
 
     private val numbers = mutableListOf("one", "two", "three", "four","five","six","seven","eight","nine")
 
-    private val additionRepo = AdditionRepositary()
+    private val additionRepo =
+        AdditionRepositary1()
     private val additionQuizList = additionRepo.fetchAdditionQuiz()
 
 
@@ -22,8 +24,12 @@ class TryAgainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
 
-        val top: Animation = AnimationUtils.loadAnimation(this,R.anim.from_top)
-        val bottom: Animation = AnimationUtils.loadAnimation(this,R.anim.from_bottom)
+        val top: Animation = AnimationUtils.loadAnimation(this,
+            R.anim.from_top
+        )
+        val bottom: Animation = AnimationUtils.loadAnimation(this,
+            R.anim.from_bottom
+        )
 
         val intent = intent
         val bundle = intent.extras
@@ -34,7 +40,7 @@ class TryAgainActivity : AppCompatActivity() {
         val myQuiz = additionQuizList[quizNumber!!].firstNum + additionQuizList[quizNumber].symbol + additionQuizList[quizNumber].secondNum
 //        Log.i("goo", myQuiz)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_try_again)
+        setContentView(R.layout.activity_try_again1)
         displayNumbers(quizNumber)
         num11.startAnimation(top)
         num21.startAnimation(top)
@@ -65,13 +71,13 @@ class TryAgainActivity : AppCompatActivity() {
         val correctResult = expression.evaluate()
 
         if (correctResult.toInt().toString() == answer1.text.toString()){
-            val intent = Intent(this, CongratulationsActivity::class.java)
+            val intent = Intent(this, Congratulations1Activity::class.java)
             intent.putExtra("answer",(correctResult.toInt()-1).toString())
            // intent.putExtra("qno2",quizNumber)
             startActivity(intent)
 
         }else{
-            val intent3 = Intent(this, HintActivity::class.java)
+            val intent3 = Intent(this, Hint1Activity::class.java)
             intent3.putExtra("correct_answer",(correctResult.toInt()))
             intent3.putExtra("input_answer",answer1.text.toString())
             intent3.putExtra("quizNo",quizNumber)
