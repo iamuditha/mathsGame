@@ -7,6 +7,7 @@ import android.view.animation.AnimationUtils
 import kotlinx.android.synthetic.main.activity_home.*
 import com.example.mathsgame.addition.Addition1Activity
 import com.example.mathsgame.addition.Addition2Activity
+import com.example.mathsgame.addition.levelActivity
 
 
 class HomeActivity : AppCompatActivity() {
@@ -33,7 +34,7 @@ class HomeActivity : AppCompatActivity() {
 
     //go to addition page
     private fun navigateToAddition() {
-        val intent = Intent(this, Addition2Activity::class.java)
+        val intent = Intent(this, levelActivity::class.java)
         startActivity(intent)
     }
 }
