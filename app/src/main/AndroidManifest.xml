@@ -17,6 +17,9 @@
         <activity
             android:name=".addition.level2.TryAgain2Activity"
             android:screenOrientation="landscape" />
+        <activity
+            android:name=".addition.level3.TryAgain3Activity"
+            android:screenOrientation="landscape" />
 
         <activity
             android:name=".StartActivity"
@@ -34,16 +37,25 @@
             android:name=".addition.level2.Hint2Activity"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".addition.level3.Hint3Activity"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".addition.level1.Congratulations1Activity"
             android:screenOrientation="landscape" />
         <activity
             android:name=".addition.level2.Congratulations2Activity"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".addition.level3.Congratulations3Activity"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".addition.level1.Addition1Activity"
             android:screenOrientation="landscape" />
         <activity
             android:name=".addition.level2.Addition2Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".addition.level3.Addition3Activity"
             android:screenOrientation="landscape" />
         <activity
             android:name=".HomeActivity"
