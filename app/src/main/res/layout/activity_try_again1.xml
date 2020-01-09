@@ -71,7 +71,6 @@
         android:id="@+id/additionSymbol1"
         android:layout_width="111dp"
         android:layout_height="118dp"
-        android:src="@drawable/addition_symbol"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/num21"
         app:layout_constraintHorizontal_bias="0.493"

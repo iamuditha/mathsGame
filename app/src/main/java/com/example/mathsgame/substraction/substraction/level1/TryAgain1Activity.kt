@@ -1,4 +1,4 @@
-package com.example.mathsgame.addition.level1
+package com.example.mathsgame.substraction.substraction.level1
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -15,7 +15,7 @@ class TryAgain1Activity : AppCompatActivity() {
     private val numbers = mutableListOf("one", "two", "three", "four","five","six","seven","eight","nine")
 
     private val additionRepo =
-        AdditionRepositary1()
+        SubRepositary1()
     private val additionQuizList = additionRepo.fetchAdditionQuiz()
 
 
@@ -63,7 +63,7 @@ class TryAgain1Activity : AppCompatActivity() {
 
         num11.setImageResource(resourceId1)
         num21.setImageResource(resourceId2)
-        additionSymbol1.setImageResource(R.drawable.addition_symbol)
+        additionSymbol1.setImageResource(R.drawable.substraction_symbol)
     }
 
     private fun checkResult(Q : String, quizNumber : Int) {

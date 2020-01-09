@@ -1,4 +1,4 @@
-package com.example.mathsgame.addition.level2
+package com.example.mathsgame.substraction.substraction.level2
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,8 +8,15 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import com.example.mathsgame.R
 import com.example.mathsgame.addition.level1.Hint1Activity
-import kotlinx.android.synthetic.main.activity_try_again1.*
+import kotlinx.android.synthetic.main.activity_addition2.*
 import kotlinx.android.synthetic.main.activity_try_again2.*
+import kotlinx.android.synthetic.main.activity_try_again2.additionSymbol
+import kotlinx.android.synthetic.main.activity_try_again2.answer
+import kotlinx.android.synthetic.main.activity_try_again2.done
+import kotlinx.android.synthetic.main.activity_try_again2.num1
+import kotlinx.android.synthetic.main.activity_try_again2.num2
+import kotlinx.android.synthetic.main.activity_try_again2.num3
+import kotlinx.android.synthetic.main.activity_try_again2.num4
 import net.objecthunter.exp4j.ExpressionBuilder
 
 class TryAgain2Activity : AppCompatActivity() {
@@ -17,7 +24,7 @@ class TryAgain2Activity : AppCompatActivity() {
     private val numbers = mutableListOf("one", "two", "three", "four","five","six","seven","eight","nine")
 
     private val additionRepo =
-        AdditionRepositary2()
+        SubRepositary2()
     private val additionQuizList = additionRepo.fetchAdditionQuiz()
 
 
@@ -82,7 +89,7 @@ class TryAgain2Activity : AppCompatActivity() {
         num2.setImageResource(resourceId2)
         num3.setImageResource(resourceId3)
         num4.setImageResource(resourceId4)
-        additionSymbol.setImageResource(R.drawable.addition_symbol)
+        additionSymbol.setImageResource(R.drawable.substraction_symbol)
     }
 
     private fun checkResult(Q : String, quizNumber : Int) {

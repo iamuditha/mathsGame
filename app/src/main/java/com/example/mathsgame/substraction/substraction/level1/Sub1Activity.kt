@@ -1,4 +1,4 @@
-package com.example.mathsgame.addition.level1
+package com.example.mathsgame.substraction.substraction.level1
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_addition1.*
 import net.objecthunter.exp4j.ExpressionBuilder
 import kotlin.random.Random
 
-class Addition1Activity : AppCompatActivity() {
+class Sub1Activity : AppCompatActivity() {
 
 
     private val numbers = mutableListOf("one", "two", "three", "four","five","six","seven","eight","nine")
@@ -20,13 +20,14 @@ class Addition1Activity : AppCompatActivity() {
 
 
     private val additionRepo =
-        AdditionRepositary1()
+        SubRepositary1()
     private val additionQuizList = additionRepo.fetchAdditionQuiz()
 
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
 
 
          val top: Animation = AnimationUtils.loadAnimation(this,
@@ -40,6 +41,7 @@ class Addition1Activity : AppCompatActivity() {
         Log.i("goo", myQuiz)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_addition1)
+        Log.i("message", "calledd")
         displayNumbers()
         num2.startAnimation(top)
         num4.startAnimation(top)
@@ -63,7 +65,8 @@ class Addition1Activity : AppCompatActivity() {
 
         num2.setImageResource(resourceId1)
         num4.setImageResource(resourceId2)
-        additionSymbol.setImageResource(R.drawable.addition_symbol)
+        additionSymbol.setImageResource(R.drawable.substraction_symbol)
+
     }
 
     private fun checkResult(Q : String) {

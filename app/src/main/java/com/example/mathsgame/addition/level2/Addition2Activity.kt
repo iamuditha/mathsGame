@@ -85,6 +85,7 @@ class Addition2Activity : AppCompatActivity() {
         num2.setImageResource(resourceId2)
         num3.setImageResource(resourceId3)
         num4.setImageResource(resourceId4)
+        additionSymbol.setImageResource(R.drawable.addition_symbol)
     }
 
     private fun checkResult(Q : String) {

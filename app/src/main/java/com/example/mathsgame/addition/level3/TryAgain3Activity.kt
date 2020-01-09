@@ -87,6 +87,7 @@ class TryAgain3Activity : AppCompatActivity() {
         num3.setImageResource(resourceId4)
         num4.setImageResource(resourceId5)
         num6a.setImageResource(resourceId6)
+        additionSymbol.setImageResource(R.drawable.addition_symbol)
     }
 
     private fun checkResult(Q : String, quizNumber : Int) {

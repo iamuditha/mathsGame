@@ -20,6 +20,9 @@ class HomeActivity : AppCompatActivity() {
         add.setOnClickListener {
             navigateToAddition()
         }
+        substract.setOnClickListener {
+            startActivity(Intent(this, com.example.mathsgame.substraction.substraction.levelActivity::class.java))
+        }
     }
 
     private fun startAnimations() {

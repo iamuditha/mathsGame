@@ -1,4 +1,4 @@
-package com.example.mathsgame.addition.level3
+package com.example.mathsgame.substraction.substraction.level3
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -12,14 +12,13 @@ import kotlinx.android.synthetic.main.activity_addition1.answer
 import kotlinx.android.synthetic.main.activity_addition1.done
 import kotlinx.android.synthetic.main.activity_addition1.num2
 import kotlinx.android.synthetic.main.activity_addition1.num4
-import kotlinx.android.synthetic.main.activity_addition2.*
 import kotlinx.android.synthetic.main.activity_addition2.num1
 import kotlinx.android.synthetic.main.activity_addition2.num3
 import kotlinx.android.synthetic.main.activity_addition3.*
 import net.objecthunter.exp4j.ExpressionBuilder
 import kotlin.random.Random
 
-class Addition3Activity : AppCompatActivity() {
+class Sub3Activity : AppCompatActivity() {
 
 
     private val numbers = mutableListOf("one", "two", "three", "four","five","six","seven","eight","nine")
@@ -28,7 +27,7 @@ class Addition3Activity : AppCompatActivity() {
 
 
     private val additionRepo =
-        AdditionRepositary3()
+        SubRepositary3()
     private val additionQuizList = additionRepo.fetchAdditionQuiz()
 
 
@@ -98,7 +97,7 @@ class Addition3Activity : AppCompatActivity() {
         num3.setImageResource(resourceId4)
         num4.setImageResource(resourceId5)
         num6a.setImageResource(resourceId6)
-        additionSymbol.setImageResource(R.drawable.addition_symbol)
+        additionSymbol.setImageResource(R.drawable.substraction_symbol)
     }
 
     private fun checkResult(Q : String) {

@@ -11,6 +11,12 @@
         android:theme="@style/AppTheme1">
         <activity android:name=".addition.levelActivity"
             android:screenOrientation="landscape"></activity>
+        <activity android:name=".substraction.substraction.levelActivity"
+            android:screenOrientation="landscape"></activity>
+
+
+
+
         <activity
             android:name=".addition.level1.TryAgain1Activity"
             android:screenOrientation="landscape" />
@@ -20,6 +26,20 @@
         <activity
             android:name=".addition.level3.TryAgain3Activity"
             android:screenOrientation="landscape" />
+        <activity
+            android:name=".substraction.substraction.level1.TryAgain1Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".substraction.substraction.level2.TryAgain2Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".substraction.substraction.level3.TryAgain3Activity"
+            android:screenOrientation="landscape" />
+
+
+
+
+
 
         <activity
             android:name=".StartActivity"
@@ -30,6 +50,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
         <activity
             android:name=".addition.level1.Hint1Activity"
             android:screenOrientation="landscape" />
@@ -40,6 +63,22 @@
             android:name=".addition.level3.Hint3Activity"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".substraction.substraction.level1.Hint1Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".substraction.substraction.level2.Hint2Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".substraction.substraction.level3.Hint3Activity"
+            android:screenOrientation="landscape" />
+
+
+
+
+
+
+
+        <activity
             android:name=".addition.level1.Congratulations1Activity"
             android:screenOrientation="landscape" />
         <activity
@@ -49,6 +88,18 @@
             android:name=".addition.level3.Congratulations3Activity"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".substraction.substraction.level1.Congratulations1Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".substraction.substraction.level2.Congratulations2Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".substraction.substraction.level3.Congratulations3Activity"
+            android:screenOrientation="landscape" />
+
+
+
+        <activity
             android:name=".addition.level1.Addition1Activity"
             android:screenOrientation="landscape" />
         <activity
@@ -57,6 +108,19 @@
         <activity
             android:name=".addition.level3.Addition3Activity"
             android:screenOrientation="landscape" />
+        <activity
+            android:name=".substraction.substraction.level1.Sub1Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".substraction.substraction.level2.Sub2Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".substraction.substraction.level3.Sub3Activity"
+            android:screenOrientation="landscape" />
+
+
+
+
         <activity
             android:name=".HomeActivity"
             android:screenOrientation="landscape" />
