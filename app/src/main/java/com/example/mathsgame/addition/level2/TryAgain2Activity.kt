@@ -44,12 +44,14 @@ class TryAgain2Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_try_again2)
         displayNumbers(quizNumber)
-        num11.startAnimation(top)
-        num21.startAnimation(top)
-        additionSymbol1.startAnimation(bottom)
-        answer1.startAnimation(bottom)
-        done1.startAnimation(bottom)
-        done1.setOnClickListener {
+        num1.startAnimation(top)
+        num2.startAnimation(top)
+        num3.startAnimation(top)
+        num4.startAnimation(top)
+        additionSymbol.startAnimation(bottom)
+        answer.startAnimation(bottom)
+        done.startAnimation(bottom)
+        done.setOnClickListener {
             checkResult(myQuiz,quizNumber)
         }
     }

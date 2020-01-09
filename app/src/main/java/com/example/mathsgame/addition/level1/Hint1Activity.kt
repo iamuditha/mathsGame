@@ -25,6 +25,7 @@ class Hint1Activity : AppCompatActivity() {
 
         AnotherQuiz.startAnimation(bottom)
         tryAgain.startAnimation(bottom)
+        showAnswer.startAnimation(bottom)
         hint.startAnimation(top)
 
         val intent = intent
