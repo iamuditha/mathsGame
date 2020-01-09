@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.mathsgame.R
+import com.example.mathsgame.addition.level1.Addition1Activity
+import com.example.mathsgame.addition.level2.Addition2Activity
 import kotlinx.android.synthetic.main.activity_level.*
 
 class levelActivity : AppCompatActivity() {

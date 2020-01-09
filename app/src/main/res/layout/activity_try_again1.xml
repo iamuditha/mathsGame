@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/calculation_background"
-    tools:context=".addition.Addition1Activity">
+    tools:context=".addition.level1.Addition1Activity">
 
     <TextView
         android:id="@+id/additionQuiz1"

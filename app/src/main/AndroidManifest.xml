@@ -12,8 +12,12 @@
         <activity android:name=".addition.levelActivity"
             android:screenOrientation="landscape"></activity>
         <activity
-            android:name=".addition.TryAgain1Activity"
+            android:name=".addition.level1.TryAgain1Activity"
             android:screenOrientation="landscape" />
+        <activity
+            android:name=".addition.level2.TryAgain2Activity"
+            android:screenOrientation="landscape" />
+
         <activity
             android:name=".StartActivity"
             android:screenOrientation="landscape">
@@ -24,22 +28,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".addition.Hint1Activity"
+            android:name=".addition.level1.Hint1Activity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".addition.Hint2Activity"
+            android:name=".addition.level2.Hint2Activity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".addition.Congratulations1Activity"
+            android:name=".addition.level1.Congratulations1Activity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".addition.Congratulations2Activity"
+            android:name=".addition.level2.Congratulations2Activity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".addition.Addition1Activity"
+            android:name=".addition.level1.Addition1Activity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".addition.Addition2Activity"
+            android:name=".addition.level2.Addition2Activity"
             android:screenOrientation="landscape" />
         <activity
             android:name=".HomeActivity"

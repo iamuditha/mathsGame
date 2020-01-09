@@ -1,4 +1,4 @@
-package com.example.mathsgame.addition
+package com.example.mathsgame.addition.level2
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import com.example.mathsgame.R
+import com.example.mathsgame.addition.level1.Hint1Activity
 import kotlinx.android.synthetic.main.activity_try_again1.*
 import kotlinx.android.synthetic.main.activity_try_again2.*
 import net.objecthunter.exp4j.ExpressionBuilder

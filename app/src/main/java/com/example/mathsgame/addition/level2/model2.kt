@@ -1,4 +1,4 @@
-package com.example.mathsgame.addition
+package com.example.mathsgame.addition.level2
 
 
 data class Quiz2(

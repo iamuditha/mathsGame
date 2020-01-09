@@ -1,4 +1,4 @@
-package com.example.mathsgame.addition
+package com.example.mathsgame.addition.level1
 
 class AdditionRepositary1 {
 

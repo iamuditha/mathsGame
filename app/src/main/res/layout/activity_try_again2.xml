@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/calculation_background"
-    tools:context=".addition.Addition2Activity">
+    tools:context=".addition.level2.Addition2Activity">
 
     <TextView
         android:id="@+id/additionQuiz"
@@ -32,7 +32,7 @@
         android:textColor="@android:color/black"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/additionSymbol" />
 
@@ -43,7 +43,6 @@
         android:background="@drawable/done_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/answer"
         app:layout_constraintVertical_bias="0.0" />
@@ -52,9 +51,10 @@
         android:id="@+id/num2"
         android:layout_width="107dp"
         android:layout_height="107dp"
+        android:layout_marginStart="107dp"
         android:layout_marginBottom="224dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/num1"
+        app:layout_constraintStart_toStartOf="@+id/num1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -62,46 +62,45 @@
         android:id="@+id/num1"
         android:layout_width="107dp"
         android:layout_height="107dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="72dp"
         android:layout_marginBottom="224dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.987" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/num4"
         android:layout_width="107dp"
         android:layout_height="107dp"
-        android:layout_marginEnd="116dp"
+        android:layout_marginEnd="68dp"
         android:layout_marginBottom="224dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.987" />
 
     <ImageView
         android:id="@+id/num3"
         android:layout_width="107dp"
         android:layout_height="107dp"
+        android:layout_marginStart="36dp"
         android:layout_marginBottom="224dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/num4"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/additionSymbol"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.987" />
 
     <ImageView
         android:id="@+id/additionSymbol"
         android:layout_width="91dp"
         android:layout_height="84dp"
         android:layout_marginStart="36dp"
+        android:foregroundGravity="center"
         android:src="@drawable/addition_symbol"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/num4"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/num2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.275" />
+        app:layout_constraintVertical_bias="0.272" />
 </androidx.constraintlayout.widget.ConstraintLayout>

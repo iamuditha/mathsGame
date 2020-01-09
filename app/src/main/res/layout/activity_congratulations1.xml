@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".addition.Congratulations1Activity"
+    tools:context=".addition.level1.Congratulations1Activity"
     android:background="@drawable/calculation_background">
 
 
@@ -14,9 +14,8 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/congratulations_gif"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="16dp" />
-
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="51dp" />
 
     <ImageView
         android:id="@+id/congratulationImage"
@@ -32,9 +31,11 @@
 
     <TextView
         android:id="@+id/correct"
-        android:layout_width="357dp"
-        android:layout_height="121dp"
-        android:text=" You Answer is correct !!!!!!"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text=" Your Answer is correct !!!!!!"
+        android:textStyle="bold"
+        android:gravity="center"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,27 +44,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.782" />
 
-    <ImageView
-        android:id="@+id/correctAnswer"
-        android:layout_width="262dp"
-        android:layout_height="152dp"
-        android:layout_marginTop="216dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.895"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gifImageView" />
 
     <Button
         android:id="@+id/next"
         android:layout_width="128dp"
         android:layout_height="58dp"
         android:layout_marginTop="192dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/next_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintHorizontal_bias="0.948"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/correctAnswer"
         app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="128dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.958" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

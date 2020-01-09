@@ -1,4 +1,4 @@
-package com.example.mathsgame.addition
+package com.example.mathsgame.addition.level2
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

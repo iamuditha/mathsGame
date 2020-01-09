@@ -1,9 +1,10 @@
-package com.example.mathsgame.addition
+package com.example.mathsgame.addition.level2
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import com.example.mathsgame.R
@@ -36,13 +37,13 @@ class Hint2Activity : AppCompatActivity() {
 
 
         if(correct_answer!! - input_answer!! == 1 || input_answer!! - correct_answer!! == 1){
-            hint.text = "You Are So Close. Let's Try Again"
+            hint.text = "You Are So Close. Let's Try Again."
         }else if (input_answer%2 ==0 && correct_answer%2 != 0){
-            hint.text = "Answer is an Odd Number. Let's Try Again"
+            hint.text = "Answer is an Odd Number. Let's Try Again."
         }else if (input_answer%2 !=0 && correct_answer%2 == 0){
-            hint.text = "Answer is an Even Number. Let's Try Again"
+            hint.text = "Answer is an Even Number. Let's Try Again."
         }else{
-            hint.text = "Don't Worry. Lets Try Again"
+            hint.text = "Don't Worry. Let's Try Again."
         }
 
         AnotherQuiz.setOnClickListener {
@@ -53,6 +54,12 @@ class Hint2Activity : AppCompatActivity() {
             val intent4 = Intent(this, TryAgain2Activity::class.java)
             intent4.putExtra("quizNo",quizNumber)
             startActivity(intent4)
+        }
+
+        showAnswer.setOnClickListener {
+            hint.visibility = View.INVISIBLE
+            answer.visibility = View.VISIBLE
+            answer.text = correct_answer.toString()
         }
 
 

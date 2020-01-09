@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
 import kotlinx.android.synthetic.main.activity_home.*
-import com.example.mathsgame.addition.Addition1Activity
-import com.example.mathsgame.addition.Addition2Activity
 import com.example.mathsgame.addition.levelActivity
 
 
@@ -15,6 +13,7 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
 
         startAnimations()
         //click event on + button
@@ -37,4 +36,8 @@ class HomeActivity : AppCompatActivity() {
         val intent = Intent(this, levelActivity::class.java)
         startActivity(intent)
     }
+
+
+
+
 }
