@@ -89,7 +89,7 @@ class TryAgain2Activity : AppCompatActivity() {
         val expression = ExpressionBuilder(Q).build()
         val correctResult = expression.evaluate()
 
-        if (correctResult.toInt().toString() == answer1.text.toString()){
+        if (correctResult.toInt().toString() == answer.text.toString()){
             val intent = Intent(this, Congratulations2Activity::class.java)
             intent.putExtra("answer",(correctResult.toInt()-1).toString())
            // intent.putExtra("qno2",quizNumber)
@@ -98,7 +98,7 @@ class TryAgain2Activity : AppCompatActivity() {
         }else{
             val intent3 = Intent(this, Hint1Activity::class.java)
             intent3.putExtra("correct_answer",(correctResult.toInt()))
-            intent3.putExtra("input_answer",answer1.text.toString())
+            intent3.putExtra("input_answer",answer.text.toString())
             intent3.putExtra("quizNo",quizNumber)
             startActivity(intent3)
 //            Log.i("answer", correctResult.toInt().toString())
