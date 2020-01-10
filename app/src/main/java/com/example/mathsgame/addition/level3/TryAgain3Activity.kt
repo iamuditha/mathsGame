@@ -64,7 +64,8 @@ class TryAgain3Activity : AppCompatActivity() {
 
         val index3 = additionQuizList[quizNo].thirdNum
         val index4 = additionQuizList[quizNo].fourthNum
-
+        val index5 = additionQuizList[quizNo].fifthNum
+        val index6 = additionQuizList[quizNo].sixthNum
 
         Log.i("checkmee", index1.toString())
         Log.i("checkmee", (numbers[index1.toInt()-1]).toString())
@@ -77,8 +78,8 @@ class TryAgain3Activity : AppCompatActivity() {
         val resourceId2 = resources.getIdentifier(numbers[index2.toInt()-1], "drawable", packageName)
         val resourceId3 = resources.getIdentifier(numbers[index3.toInt()-1], "drawable", packageName)
         val resourceId4 = resources.getIdentifier(numbers[index4.toInt()-1], "drawable", packageName)
-        val resourceId5 = resources.getIdentifier(numbers[index3.toInt()-1], "drawable", packageName)
-        val resourceId6 = resources.getIdentifier(numbers[index4.toInt()-1], "drawable", packageName)
+        val resourceId5 = resources.getIdentifier(numbers[index5.toInt()-1], "drawable", packageName)
+        val resourceId6 = resources.getIdentifier(numbers[index6.toInt()-1], "drawable", packageName)
 
 
         num1.setImageResource(resourceId2)
@@ -94,6 +95,8 @@ class TryAgain3Activity : AppCompatActivity() {
 
         val expression = ExpressionBuilder(Q).build()
         val correctResult = expression.evaluate()
+        Log.i("kkkk",expression.toString())
+        Log.i("kkkk",correctResult.toString())
 
         if (correctResult.toInt().toString() == answer.text.toString()){
             val intent = Intent(this, Congratulations3Activity::class.java)

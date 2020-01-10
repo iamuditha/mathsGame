@@ -5,8 +5,9 @@ import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
+import com.example.mathsgame.HomeActivity
 import com.example.mathsgame.R
-import com.example.mathsgame.SoundService
+import com.example.mathsgame.HappySoundService
 import kotlinx.android.synthetic.main.activity_congratulations1.*
 
 
@@ -16,7 +17,7 @@ class Congratulations3Activity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        startService(Intent(this, SoundService::class.java))
+        startService(Intent(this, HappySoundService::class.java))
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_congratulations1)
 
@@ -51,9 +52,14 @@ class Congratulations3Activity : AppCompatActivity() {
             startActivity(intent1)
 
         }
+
+        back.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
     }
     override fun onPause() { //stop service and stop music
-        stopService(Intent(this, SoundService::class.java))
+        stopService(Intent(this, HappySoundService::class.java))
         super.onPause()
     }
 }

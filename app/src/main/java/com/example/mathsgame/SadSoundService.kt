@@ -6,14 +6,14 @@ import android.media.MediaPlayer
 import android.os.IBinder
 
 
-class SoundService : Service() {
+class SadSoundService : Service() {
     var player: MediaPlayer? = null
     override fun onBind(intent: Intent): IBinder? {
         return null
     }
 
     override fun onCreate() {
-        player = MediaPlayer.create(this, R.raw.clap) //select music file
+        player = MediaPlayer.create(this, R.raw.sad) //select music file
         player!!.isLooping = true //set looping
     }
 

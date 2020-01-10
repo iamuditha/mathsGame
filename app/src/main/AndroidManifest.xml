@@ -126,7 +126,10 @@
             android:screenOrientation="landscape" />
 
         <service
-            android:name=".SoundService"
+            android:name=".HappySoundService"
+            android:enabled="true" />
+        <service
+            android:name=".SadSoundService"
             android:enabled="true" />
     </application>
 
