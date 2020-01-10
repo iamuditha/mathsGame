@@ -7,6 +7,7 @@ import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mathsgame.R
 import com.example.mathsgame.HappySoundService
+import com.example.mathsgame.HomeActivity
 import kotlinx.android.synthetic.main.activity_congratulations1.*
 
 
@@ -50,6 +51,10 @@ class Congratulations2Activity : AppCompatActivity() {
 
             startActivity(intent1)
 
+        }
+        back.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
         }
     }
     override fun onPause() { //stop service and stop music

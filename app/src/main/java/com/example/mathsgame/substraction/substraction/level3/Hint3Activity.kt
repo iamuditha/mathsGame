@@ -72,4 +72,5 @@ class Hint3Activity : AppCompatActivity() {
         stopService(Intent(this, SadSoundService::class.java))
         super.onPause()
     }
+
 }

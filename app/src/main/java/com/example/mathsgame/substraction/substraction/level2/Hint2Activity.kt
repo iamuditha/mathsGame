@@ -68,4 +68,8 @@ class Hint2Activity : AppCompatActivity() {
 
 
     }
+    override fun onPause() { //stop service and stop music
+        stopService(Intent(this, SadSoundService::class.java))
+        super.onPause()
+    }
 }
