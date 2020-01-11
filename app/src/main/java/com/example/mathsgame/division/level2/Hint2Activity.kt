@@ -1,4 +1,4 @@
-package com.example.mathsgame.substraction.substraction.level2
+package com.example.mathsgame.division.level2
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -54,7 +54,7 @@ class Hint2Activity : AppCompatActivity() {
         }
 
         AnotherQuiz.setOnClickListener {
-            startActivity(Intent(this, Sub2Activity::class.java))
+            startActivity(Intent(this, div2Activity::class.java))
         }
 
         tryAgain.setOnClickListener {

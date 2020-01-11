@@ -8,12 +8,14 @@ import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import com.example.mathsgame.R
-import com.example.mathsgame.SadSoundService
+import com.example.mathsgame.sound.SadSoundService
+import com.example.mathsgame.sound.bgSoundService
 import kotlinx.android.synthetic.main.activity_hint.*
 
 class Hint3Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        stopService(Intent(this, bgSoundService::class.java))
         startService(Intent(this, SadSoundService::class.java))
 
         super.onCreate(savedInstanceState)
@@ -70,6 +72,7 @@ class Hint3Activity : AppCompatActivity() {
     }
     override fun onPause() { //stop service and stop music
         stopService(Intent(this, SadSoundService::class.java))
+        startService(Intent(this, bgSoundService::class.java))
         super.onPause()
     }
 

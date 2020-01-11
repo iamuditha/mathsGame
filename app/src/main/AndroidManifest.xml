@@ -13,6 +13,11 @@
             android:screenOrientation="landscape"></activity>
         <activity android:name=".substraction.substraction.levelActivity"
             android:screenOrientation="landscape"></activity>
+        <activity android:name=".multiplication.level1.levelActivity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".division.levelActivity"
+            android:screenOrientation="landscape"></activity>
+
 
 
 
@@ -35,8 +40,19 @@
         <activity
             android:name=".substraction.substraction.level3.TryAgain3Activity"
             android:screenOrientation="landscape" />
+        <activity android:name=".multiplication.level1.level1.TryAgain1Activity"
+            android:screenOrientation="landscape"></activity>
 
-
+        <activity android:name=".multiplication.level1.level2.TryAgain2Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".multiplication.level1.level3.TryAgain3Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".division.level1.TryAgain1Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".division.level2.TryAgain2Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".division.level3.TryAgain3Activity"
+            android:screenOrientation="landscape"></activity>
 
 
 
@@ -71,6 +87,18 @@
         <activity
             android:name=".substraction.substraction.level3.Hint3Activity"
             android:screenOrientation="landscape" />
+        <activity android:name=".multiplication.level1.level1.Hint1Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".multiplication.level1.level2.Hint2Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".multiplication.level1.level3.Hint3Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".division.level1.Hint1Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".division.level2.Hint2Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".division.level3.Hint3Activity"
+            android:screenOrientation="landscape"></activity>
 
 
 
@@ -96,6 +124,19 @@
         <activity
             android:name=".substraction.substraction.level3.Congratulations3Activity"
             android:screenOrientation="landscape" />
+        <activity android:name=".multiplication.level1.level1.Congratulations1Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".multiplication.level1.level2.Congratulations2Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".multiplication.level1.level3.Congratulations3Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".division.level1.Congratulations1Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".division.level2.Congratulations2Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".division.level3.Congratulations3Activity"
+            android:screenOrientation="landscape"></activity>
+
 
 
 
@@ -117,6 +158,19 @@
         <activity
             android:name=".substraction.substraction.level3.Sub3Activity"
             android:screenOrientation="landscape" />
+        <activity android:name=".multiplication.level1.level1.Mul1Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".multiplication.level1.level2.Mul2Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".multiplication.level1.level3.Mul3Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".division.level1.div1Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".division.level2.div2Activity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".division.level3.div3Activity"
+            android:screenOrientation="landscape"></activity>
+
 
 
 
@@ -126,10 +180,13 @@
             android:screenOrientation="landscape" />
 
         <service
-            android:name=".HappySoundService"
+            android:name=".sound.HappySoundService"
             android:enabled="true" />
         <service
-            android:name=".SadSoundService"
+            android:name=".sound.SadSoundService"
+            android:enabled="true" />
+        <service
+            android:name=".sound.bgSoundService"
             android:enabled="true" />
     </application>
 

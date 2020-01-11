@@ -1,9 +1,10 @@
-package com.example.mathsgame
+package com.example.mathsgame.sound
 
 import android.app.Service
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.IBinder
+import com.example.mathsgame.R
 
 
 class HappySoundService : Service() {

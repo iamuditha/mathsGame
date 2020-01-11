@@ -1,4 +1,4 @@
-package com.example.mathsgame.substraction.substraction.level3
+package com.example.mathsgame.multiplication.level1.level2
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,16 +7,22 @@ import android.util.Log
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import com.example.mathsgame.R
-import com.example.mathsgame.addition.level3.Hint3Activity
-import kotlinx.android.synthetic.main.activity_try_again3.*
+import com.example.mathsgame.addition.level1.Hint1Activity
+import kotlinx.android.synthetic.main.activity_try_again2.additionSymbol
+import kotlinx.android.synthetic.main.activity_try_again2.answer
+import kotlinx.android.synthetic.main.activity_try_again2.done
+import kotlinx.android.synthetic.main.activity_try_again2.num1
+import kotlinx.android.synthetic.main.activity_try_again2.num2
+import kotlinx.android.synthetic.main.activity_try_again2.num3
+import kotlinx.android.synthetic.main.activity_try_again2.num4
 import net.objecthunter.exp4j.ExpressionBuilder
 
-class TryAgain3Activity : AppCompatActivity() {
+class TryAgain2Activity : AppCompatActivity() {
 
     private val numbers = mutableListOf("one", "two", "three", "four","five","six","seven","eight","nine")
 
     private val additionRepo =
-        SubRepositary3()
+        MulRepositary2()
     private val additionQuizList = additionRepo.fetchAdditionQuiz()
 
 
@@ -38,17 +44,15 @@ class TryAgain3Activity : AppCompatActivity() {
         Log.i("numm try", quizNumber.toString())
 
 
-        val myQuiz = (additionQuizList[quizNumber!!].firstNum)+( additionQuizList[quizNumber].secondNum)+( additionQuizList[quizNumber].thirdNum) + additionQuizList[quizNumber].symbol + (additionQuizList[quizNumber].fourthNum)+(additionQuizList[quizNumber].fifthNum)+( additionQuizList[quizNumber].sixthNum)
+        val myQuiz = (additionQuizList[quizNumber!!].firstNum)+( additionQuizList[quizNumber].secondNum) + additionQuizList[quizNumber].symbol + (additionQuizList[quizNumber].thirdNum)+(additionQuizList[quizNumber].fourthNum)
         Log.i("goo", myQuiz)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_try_again3)
+        setContentView(R.layout.activity_try_again2)
         displayNumbers(quizNumber)
-        num5.startAnimation(top)
         num1.startAnimation(top)
         num2.startAnimation(top)
         num3.startAnimation(top)
         num4.startAnimation(top)
-        num6a.startAnimation(top)
         additionSymbol.startAnimation(bottom)
         answer.startAnimation(bottom)
         done.startAnimation(bottom)
@@ -64,8 +68,7 @@ class TryAgain3Activity : AppCompatActivity() {
 
         val index3 = additionQuizList[quizNo].thirdNum
         val index4 = additionQuizList[quizNo].fourthNum
-        val index5 = additionQuizList[quizNo].fifthNum
-        val index6 = additionQuizList[quizNo].sixthNum
+
 
         Log.i("checkmee", index1.toString())
         Log.i("checkmee", (numbers[index1.toInt()-1]).toString())
@@ -78,18 +81,13 @@ class TryAgain3Activity : AppCompatActivity() {
         val resourceId2 = resources.getIdentifier(numbers[index2.toInt()-1], "drawable", packageName)
         val resourceId3 = resources.getIdentifier(numbers[index3.toInt()-1], "drawable", packageName)
         val resourceId4 = resources.getIdentifier(numbers[index4.toInt()-1], "drawable", packageName)
-        val resourceId5 = resources.getIdentifier(numbers[index5.toInt()-1], "drawable", packageName)
-        val resourceId6 = resources.getIdentifier(numbers[index6.toInt()-1], "drawable", packageName)
 
 
-        num1.setImageResource(resourceId2)
-        num5.setImageResource(resourceId1)
-        num2.setImageResource(resourceId3)
-        num3.setImageResource(resourceId4)
-        num4.setImageResource(resourceId5)
-        num6a.setImageResource(resourceId6)
-        additionSymbol.setImageResource(R.drawable.substraction_symbol)
-
+        num1.setImageResource(resourceId1)
+        num2.setImageResource(resourceId2)
+        num3.setImageResource(resourceId3)
+        num4.setImageResource(resourceId4)
+        additionSymbol.setImageResource(R.drawable.mul_symbol)
     }
 
     private fun checkResult(Q : String, quizNumber : Int) {
@@ -98,13 +96,13 @@ class TryAgain3Activity : AppCompatActivity() {
         val correctResult = expression.evaluate()
 
         if (correctResult.toInt().toString() == answer.text.toString()){
-            val intent = Intent(this, Congratulations3Activity::class.java)
+            val intent = Intent(this, Congratulations2Activity::class.java)
             intent.putExtra("answer",(correctResult.toInt()-1).toString())
            // intent.putExtra("qno2",quizNumber)
             startActivity(intent)
 
         }else{
-            val intent3 = Intent(this, Hint3Activity::class.java)
+            val intent3 = Intent(this, Hint1Activity::class.java)
             intent3.putExtra("correct_answer",(correctResult.toInt()))
             intent3.putExtra("input_answer",answer.text.toString())
             intent3.putExtra("quizNo",quizNumber)

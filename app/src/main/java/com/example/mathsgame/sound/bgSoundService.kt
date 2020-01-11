@@ -1,19 +1,20 @@
-package com.example.mathsgame
+package com.example.mathsgame.sound
 
 import android.app.Service
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.IBinder
+import com.example.mathsgame.R
 
 
-class SadSoundService : Service() {
+class bgSoundService : Service() {
     var player: MediaPlayer? = null
     override fun onBind(intent: Intent): IBinder? {
         return null
     }
 
     override fun onCreate() {
-        player = MediaPlayer.create(this, R.raw.sad) //select music file
+        player = MediaPlayer.create(this, R.raw.bg) //select music file
         player!!.isLooping = true //set looping
     }
 

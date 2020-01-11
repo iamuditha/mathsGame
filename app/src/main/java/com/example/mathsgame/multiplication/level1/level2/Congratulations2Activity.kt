@@ -1,4 +1,4 @@
-package com.example.mathsgame.substraction.substraction.level2
+package com.example.mathsgame.multiplication.level1.level2
 
 import android.content.Intent
 import android.os.Bundle
@@ -47,7 +47,7 @@ class Congratulations2Activity : AppCompatActivity() {
 //        correctAnswer.setImageResource(resourceId)
 
         next.setOnClickListener {
-            val intent1 = Intent(this, Sub2Activity::class.java)
+            val intent1 = Intent(this, Mul2Activity::class.java)
 //            intent.putExtra("qno3", quizNumber)
             intent.putExtra("qno4", false)
 

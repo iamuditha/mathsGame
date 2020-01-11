@@ -23,6 +23,13 @@ class HomeActivity : AppCompatActivity() {
         substract.setOnClickListener {
             startActivity(Intent(this, com.example.mathsgame.substraction.substraction.levelActivity::class.java))
         }
+
+        mul.setOnClickListener {
+            startActivity(Intent(this,com.example.mathsgame.multiplication.level1.levelActivity::class.java))
+        }
+        divide.setOnClickListener {
+            startActivity(Intent(this, com.example.mathsgame.division.levelActivity::class.java))
+        }
     }
 
     private fun startAnimations() {

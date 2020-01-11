@@ -1,4 +1,4 @@
-package com.example.mathsgame.substraction.substraction.level2
+package com.example.mathsgame.division.level1
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -12,11 +12,11 @@ import com.example.mathsgame.sound.SadSoundService
 import com.example.mathsgame.sound.bgSoundService
 import kotlinx.android.synthetic.main.activity_hint.*
 
-class Hint2Activity : AppCompatActivity() {
+class Hint1Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        stopService(Intent(this, bgSoundService::class.java))
         startService(Intent(this, SadSoundService::class.java))
+        stopService(Intent(this, bgSoundService::class.java))
 
 
         super.onCreate(savedInstanceState)
@@ -54,11 +54,11 @@ class Hint2Activity : AppCompatActivity() {
         }
 
         AnotherQuiz.setOnClickListener {
-            startActivity(Intent(this, Sub2Activity::class.java))
+            startActivity(Intent(this, div1Activity::class.java))
         }
 
         tryAgain.setOnClickListener {
-            val intent4 = Intent(this, TryAgain2Activity::class.java)
+            val intent4 = Intent(this, TryAgain1Activity::class.java)
             intent4.putExtra("quizNo",quizNumber)
             startActivity(intent4)
         }
@@ -74,6 +74,7 @@ class Hint2Activity : AppCompatActivity() {
     override fun onPause() { //stop service and stop music
         stopService(Intent(this, SadSoundService::class.java))
         startService(Intent(this, bgSoundService::class.java))
+
         super.onPause()
     }
 }

@@ -1,4 +1,4 @@
-package com.example.mathsgame.substraction.substraction.level3
+package com.example.mathsgame.multiplication.level1.level3
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -16,7 +16,7 @@ class TryAgain3Activity : AppCompatActivity() {
     private val numbers = mutableListOf("one", "two", "three", "four","five","six","seven","eight","nine")
 
     private val additionRepo =
-        SubRepositary3()
+        MulRepositary3()
     private val additionQuizList = additionRepo.fetchAdditionQuiz()
 
 
@@ -88,7 +88,7 @@ class TryAgain3Activity : AppCompatActivity() {
         num3.setImageResource(resourceId4)
         num4.setImageResource(resourceId5)
         num6a.setImageResource(resourceId6)
-        additionSymbol.setImageResource(R.drawable.substraction_symbol)
+        additionSymbol.setImageResource(R.drawable.mul_symbol)
 
     }
 
@@ -104,7 +104,7 @@ class TryAgain3Activity : AppCompatActivity() {
             startActivity(intent)
 
         }else{
-            val intent3 = Intent(this, Hint3Activity::class.java)
+            val intent3 = Intent(this, com.example.mathsgame.multiplication.level1.level3.Hint3Activity::class.java)
             intent3.putExtra("correct_answer",(correctResult.toInt()))
             intent3.putExtra("input_answer",answer.text.toString())
             intent3.putExtra("quizNo",quizNumber)

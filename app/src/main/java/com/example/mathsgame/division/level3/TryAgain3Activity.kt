@@ -1,4 +1,4 @@
-package com.example.mathsgame.substraction.substraction.level3
+package com.example.mathsgame.division.level3
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,6 @@ import android.util.Log
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import com.example.mathsgame.R
-import com.example.mathsgame.addition.level3.Hint3Activity
 import kotlinx.android.synthetic.main.activity_try_again3.*
 import net.objecthunter.exp4j.ExpressionBuilder
 
@@ -16,7 +15,7 @@ class TryAgain3Activity : AppCompatActivity() {
     private val numbers = mutableListOf("one", "two", "three", "four","five","six","seven","eight","nine")
 
     private val additionRepo =
-        SubRepositary3()
+        divRepositary3()
     private val additionQuizList = additionRepo.fetchAdditionQuiz()
 
 
@@ -88,7 +87,7 @@ class TryAgain3Activity : AppCompatActivity() {
         num3.setImageResource(resourceId4)
         num4.setImageResource(resourceId5)
         num6a.setImageResource(resourceId6)
-        additionSymbol.setImageResource(R.drawable.substraction_symbol)
+        additionSymbol.setImageResource(R.drawable.divide_symbol)
 
     }
 
